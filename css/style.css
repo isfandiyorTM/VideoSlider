@@ -175,7 +175,7 @@ header nav .container ul li a:hover::before {
 }
 
 .slider-navigation button.active {
-    background: #2696E9;
+    /* background: #2696E9; */
     width: 20px;
     border-radius: 10px;
 }
