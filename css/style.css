@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+button:active {
+    transform: translateY(3px);
+}
+
+body.scroll {
+    overflow: hidden;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #000;
+}
+
+header {
+    width: 100%;
+    min-height: 100vh;
+    /* background: aqua; */
+}
+
+header nav .container {
+    height: 70px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
+header nav .container ul.show {
+    display: flex;
+}
+
+header nav .container ul li {
+    list-style: none;
+}
+
+header nav .container ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin-left: 30px;
+}
+
+header nav .container ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    opacity: 0;
+    width: 100%;
+    height: 1.5px;
+    background: white;
+    transition: all 0.4s ease;
+}
+
+header nav .container ul li a:hover::before {
+    bottom: -3px;
+    opacity: 1;
+}
+
+#menu {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: white;
+    display: none;
+}
+
+.home video.active {
+    display: inline-block;
+}
+
+.home video {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.h-80 {
+    min-height: 80vh;
+}
+
+.text-div.active {
+    display: inline-block;
+}
+
+.text-div {
+    width: 40%;
+    display: none;
+}
+
+.text-div h1 {
+    font-weight: 400;
+    font-size: 60px;
+    color: white;
+}
+
+.text-div h1 span {
+    font-weight: 700;
+}
+
+.text-div p {
+    margin: 20px 0;
+    line-height: 25px;
+    font-size: 14px;
+    color: white;
+}
+
+.text-div button {
+    border: none;
+    background: white;
+    color: black;
+    font-size: 18px;
+    padding: 10px 30px;
+}
+
+.social-medias {
+    flex-direction: column;
+}
+
+.social-medias button {
+    border: none;
+    background: none;
+}
+
+.social-medias button i {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.slider-navigation {
+    width: 100%;
+    justify-content: center;
+}
+
+.slider-navigation button.active {
+    background: #2696E9;
+    width: 20px;
+    border-radius: 10px;
+}
+
+.slider-navigation button {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    margin: 0 10px;
+    border-radius: 50%;
+    border: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.slider-navigation button:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    header nav .container ul {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(1, 1, 1, 0.5);
+    }
+    header nav .container ul li a {
+        display: inline-block;
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
+    #menu {
+        display: inline-block;
+        position: relative;
+        z-index: 999;
+    }
+    .text-div {
+        width: 90%;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        width: 90%;
+    }
+    .text-div h1 {
+        font-size: 40px;
+    }
+    .text-div p {
+        line-height: 20px;
+    }
+}
+
+main {
+    height: 200vh;
+}
